@@ -6,13 +6,13 @@ set -e
 
 : "${TAG:="$(date "+%Y%m%d%H%M%S")"}"
 
-subdir="keyboards/keychron/k6p/keymaps/ansi"
+subdir="keyboards/keychron/k6/keymaps/ansi"
 
 if [[ -d "qmk_firmware/$subdir" ]]; then
   rm -rf "qmk_firmware/$subdir"
 fi
 
-cp -rp "$subdir" qmk_firmware/keyboards/keychron/k6p/keymaps
+cp -rp "$subdir" qmk_firmware/keyboards/keychron/k6/keymaps
 
 (cd qmk_firmware &&
   make -j4 keychron/k6/rgb/ansi:ansi COLOR=false &&
