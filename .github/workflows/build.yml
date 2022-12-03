@@ -16,7 +16,7 @@ jobs:
       - name: Install git submodules
         run: cd qmk_firmware && make git-submodule
       - name: Copy custom keymaps
-        run: cp -rp keyboards/keychron/k6p/keymaps/ansi qmk_firmware/keyboards/keychron/k6p/keymaps
+        run: cp -rp keyboards/keychron/k6/keymaps/ansi qmk_firmware/keyboards/keychron/k6/keymaps
       - name: Compile firmware
         run: cd qmk_firmware && make keychron/k6/rgb/ansi:ansi
       - name: Upload compiled firmware (build artifact)
@@ -46,7 +46,7 @@ jobs:
     #   - name: Install git submodules
     #     run: cd qmk_firmware && make git-submodule
     #   - name: Copy custom keymaps
-    #     run: cp -rp keymaps qmk_firmware/keyboards/keychron/k6/keymaps/ansi-josh
+    #     run: cp -rp keymaps qmk_firmware/keyboards/keychron/k6/keymaps/ansi
     #   - name: Compile firmware
     #     run: cd qmk_firmware && make keychron/k6:ansi-josh
     #   - name: Upload compiled firmware
