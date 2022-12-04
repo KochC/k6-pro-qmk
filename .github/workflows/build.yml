@@ -35,8 +35,7 @@ jobs:
 
       - name: List files
         run: | 
-          echo ${{ env.GITHUB_RUN_NUMBER }}
-          echo ${{ env }}
+          echo ${{ github.run_number }}
 
       - name: Create Release
         id: create_release
@@ -45,7 +44,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: "testing"
-          release_name: Release 0.0.${{ env.GITHUB_RUN_NUMBER }}
+          release_name: Release 0.0.${{ github.run_number }}
           draft: false
           prerelease: false
           body_path: ./qmk_firmware/keychron_k6_rgb_ansi.bin
