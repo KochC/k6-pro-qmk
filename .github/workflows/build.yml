@@ -37,10 +37,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          tag_name: "testing"
+          release_name: Release 0.0.${{ github.GITHUB_RUN_NUMBER }}
           draft: false
           prerelease: false
+          body_path:  qmk_firmware/keychron_k6_rgb_ansi.bin
           
 #      - name: Upload Release Asset
 #        id: upload-release-asset 
