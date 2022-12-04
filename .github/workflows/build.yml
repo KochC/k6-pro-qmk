@@ -34,7 +34,7 @@ jobs:
             qmk_firmware/keychron_k6_rgb_ansi.bin
 
       - name: List files
-        run: ls -alh ./qmk_firmware
+        run: echo ${{ env.GITHUB_RUN_NUMBER }}
 
       - name: Create Release
         id: create_release
