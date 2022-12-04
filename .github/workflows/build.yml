@@ -50,4 +50,4 @@ jobs:
           prerelease: true
           title: "Keychron_K6_Pro_rgb_ansi_0.0.${{ github.run_number }}"
           files: |
-            ./qmk_firmware/keychron_k6_rgb_ansi$_{{ github.run_number }}.bin
+            ./qmk_firmware/keychron_k6_rgb_ansi_${{ github.run_number }}.bin
