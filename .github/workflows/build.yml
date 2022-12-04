@@ -41,7 +41,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: "testing"
-          release_name: Release 0.0.${{ github.GITHUB_RUN_NUMBER }}
+          release_name: Release 0.0.${{ env.GITHUB_RUN_NUMBER }}
           draft: false
           prerelease: false
           body_path: qmk_firmware/keychron_k6_rgb_ansi.bin
