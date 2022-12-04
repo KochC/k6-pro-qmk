@@ -32,7 +32,7 @@ jobs:
             qmk_firmware/keychron_k6_rgb_ansi.bin
 
       - name: List files
-        run: ls -alh
+        run: ls -alh ./qmk_firmware
 
       - name: Create Release
         id: create_release
@@ -44,7 +44,7 @@ jobs:
           release_name: Release 0.0.${{ env.GITHUB_RUN_NUMBER }}
           draft: false
           prerelease: false
-          body_path: qmk_firmware/keychron_k6_rgb_ansi.bin
+          body_path: ./qmk_firmware/keychron_k6_rgb_ansi.bin
           
 #      - name: Upload Release Asset
 #        id: upload-release-asset 
