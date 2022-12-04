@@ -19,6 +19,8 @@ jobs:
         run: cp -rp keyboards/keychron/k6/keymaps/ansi qmk_firmware/keyboards/keychron/k6/keymaps
       - name: Compile firmware
         run: cd qmk_firmware && make keychron/k6/rgb/ansi:ansi
+      - name: Renmame
+        run: mv qmk_firmware/keychron_k6_rgb_ansi_ansi.bin qmk_firmware/keychron_k6_rgb_ansi.bin 
       - name: Upload compiled firmware (build artifact)
         uses: actions/upload-artifact@v2
         with:
