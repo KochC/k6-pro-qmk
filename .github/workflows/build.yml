@@ -43,7 +43,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: "testing"
+          tag_name: "run_number_${{ github.run_number }}"
           release_name: Release 0.0.${{ github.run_number }}
           draft: false
           prerelease: false
